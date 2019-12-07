@@ -18,7 +18,7 @@ Language used to write the program : node js
 How to call methods usingf command line args : F
   
  
-a) "FetchPortfolioForToken"  node <filename> "FetchPortfolioForToken" "BTC" .See below example :
+a) "FetchPortfolioForToken"  node <filename> "FetchPortfolioForToken" <crypto> .See below example :
   
 BLRCLM52143805:checkcryptocompare 52143805$ node checkusingfs.js "FetchPortfolioForToken" "BTC"
 0 -> /usr/local/bin/node
@@ -42,7 +42,7 @@ Portfolio In Dollars for BTC  btcDeposits 3.4574540000000002 btcWithdrawal 2.3 t
 Portfolio In Dollars for ETH  ethDeposits 1.1312350000000002 ethWithdrawal 2.605839 total -219.77498015999996
 Portfolio In Dollars for BTC  xrpDeposits 1.713272 xrpWithdrawals 2.737186 total -0.2322236952
 
-c) "FetchTokenValForSpeDate  node <filename> "FetchTokenValForSpeDate" "BTC" "12/06/2019" .See below example :
+c) "FetchTokenValForSpeDate  node <filename> "FetchTokenValForSpeDate" <crypto> <date> .See below example :
 
 BLRCLM52143805:checkcryptocompare 52143805$ node checkusingfs.js "FetchTokenValForSpeDate" "BTC" "12/06/2019"
 0 -> /usr/local/bin/node
@@ -56,7 +56,7 @@ FetchTokenValForSpeDate
 { BTC: { USD: 7535.12 } }
 Portfolio In Dollars 1507.0239999999997
 
-d) "FetchAllForSpeDate"    node <filename> "FetchAllForSpeDate" "12/06/2019" . See below example
+d) "FetchAllForSpeDate"    node <filename> "FetchAllForSpeDate" <date> . See below example
 
 BLRCLM52143805:checkcryptocompare 52143805$ node checkusingfs.js "FetchAllForSpeDate" "12/06/2019"
 0 -> /usr/local/bin/node
