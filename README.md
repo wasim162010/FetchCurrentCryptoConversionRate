@@ -12,3 +12,6 @@ npm install --save cryptocompare
 
 refer https://www.npmjs.com/package/cryptocompare
 
+
+Language used to write the program : node js
+
