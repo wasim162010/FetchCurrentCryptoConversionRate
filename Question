@@ -1,1 +1,46 @@
-Imagine you're working in an elevator company and you are asked to improve the elevator experience. Existing elevators find the shortest path to serve the passenger given a button input. It hasn't changed for more than 50 years. Now with advancement in technology, we have cameras at every level telling us how many people are waiting, how long each person have waited, and how many people are already in the lift. Describe how you would design a solution to best serve the passengers. No code needed.
+Imagine you're working in an elevator company and you are asked to improve the elevator experience. Existing elevators find 
+the shortest path to serve the passenger given a button input. It hasn't changed for more than 50 years. Now with advancement 
+in technology, we have cameras at every level telling us how many people are waiting, how long each person have waited, and 
+how many people are already in the lift. Describe how you would design a solution to best serve the passengers. 
+No code needed.
+
+
+Answer :  the system would need to inspects the state of each simulated elevator and the parameters of each outstanding 
+          request[Number of people waiting,duration of waiting period/person and poeple already in lift] 
+          decides what to do, by using the Machine Learning algorithm and measures the results.Data collected by camera, 
+          such as waiting time per person, people waiting on a floor can be clubbed along with the shortest path algo to 
+          decide which elevator is best served to stop at that floor.
+
+
+1 : System needs to decide between people in different floors : Let us assume there are people waiting for the 
+         lift in different floors. Then the system use the info of how many people waiting,clubbed by their wating time
+         and directions[either up or down] of travel and current lifty capacity. For an instance, if there are 20 people on
+         floor 2 and 3, and if the combine waiting time on floor 2 is greater then waiting time combined waiting time on 3rd
+         floor, and if there are lift empty enough to serve 2nd floor people and is going in upward direction or not serving 
+         right now [assuming majority in 2nd floor wants to travel upward], second floor people will be served.
+         
+         Moreover let us assume that no lift right now has a space available to completely serve the lift by one lift, then
+         the system will use the number of people and current status of lifts to serve the people,clubbed by the lift capacity
+         pre-configured[say,masx 20 people] .For an instance, if there are 3 lifts[lift1,lift 2, lift 3],going in up direction,
+         passing/close to the 2rd floor and having 4,12,10 people respectively in them, lift 1 and lift 3 are best suited and 
+         it can be made to stop at 3rd floor.
+         
+         Another case would be when there are lifts : lift1,lift 2, lift 3 have capacity, but are currently going downwards.
+         Then in that case ,if the time of their current journey is less them time of arrival of other lifts on 2nd floor, then
+         the lifts 1 and 3 will be made available for people, else other available lifts would be considered.
+       
+2 : Using the machine learning algorithm to analyze the pattern of number of people, their direction of travel[up/down]
+         frequency of pattern , the system can make sure to give more priority to service the request that matches that 
+         pattern For example, between 12:30 - 1:00 PM, i.e lunch time, the system can make sure to give priority to request
+         that points to the halt and pick up of people from the cafeteria floor.
+         
+3 :Another scenario that needs to be considered when the number of floors exceeds 40 or 50. In that case, normally the building
+        is divided into the zones thn post analyzing the data feed from camera, the system should consider the lift which is
+        meant to service in that zone.  For an instance , assume we have a request coming from people standing in 23rd[zone 2]
+        and 40th [zone 3] floors , and system finds lifts following lifts: 1[zone 1],2[zone 2],3[zone 4] and 4[zone 3],5[zone 1],
+        7[zone 1] for people in 23rd and 40th floors respectively. But due to zone limitation, only lift 2 can be made 
+        available for 23rd floor, and only lift 4 can be made available for 40th floor people.
+        
+        These are the not the all scenarios but are few important ones that can be used to design a system
+   
+  
