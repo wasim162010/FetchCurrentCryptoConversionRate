@@ -69,15 +69,4 @@ DollarEqui
 Portfolio In Dollars for BTC 1507.0140000000013
 Portfolio In Dollars for ETH -299.90872
 Portfolio In Dollars for XRP -0.3004118
-© 2019 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
+
